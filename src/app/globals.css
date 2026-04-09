@@ -3,6 +3,23 @@
 :root {
 	--background: #ffffff;
 	--foreground: #171717;
+
+	/* Login — Colors */
+	--color-bg-dark: #00101a;
+	--color-bg-dark-alt: #000d14;
+	--color-header-bg: #0b0f12;
+	--color-accent-yellow: #ffea9e;
+	--color-accent-yellow-hover: #ffe082;
+	--color-white: #ffffff;
+	--color-divider: #2e3940;
+	--color-error: #ff4d4f;
+
+	/* Login — Shadows */
+	--shadow-button-hover: 0 4px 16px rgba(255, 234, 158, 0.35);
+
+	/* Login — Fonts */
+	--font-montserrat: var(--font-montserrat-var);
+	--font-montserrat-alt: var(--font-montserrat-alt-var);
 }
 
 @theme inline {
