@@ -16,9 +16,16 @@
     "@opennextjs/cloudflare": "^1.14.4",
     "@supabase/ssr": "^0.8.0",
     "@supabase/supabase-js": "^2.90.1",
+    "@tiptap/extension-link": "^3.22.3",
+    "@tiptap/extension-mention": "^3.22.3",
+    "@tiptap/extension-placeholder": "^3.22.3",
+    "@tiptap/pm": "^3.22.3",
+    "@tiptap/react": "^3.22.3",
+    "@tiptap/starter-kit": "^3.22.3",
     "next": "15.5.9",
     "react": "19.1.4",
-    "react-dom": "19.1.4"
+    "react-dom": "19.1.4",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

@@ -48,9 +48,9 @@ export default async function LoginPage({ searchParams }: LoginPageProps): Promi
 				aria-hidden
 			/>
 
-			{/* Left-side gradient veil (z-1) */}
+			{/* Left-side gradient veil — desktop only (z-1) */}
 			<div
-				className="absolute inset-y-0 left-0 w-full pointer-events-none"
+				className="hidden md:block absolute inset-y-0 left-0 w-full pointer-events-none"
 				style={{
 					zIndex: 1,
 					background:
@@ -71,12 +71,12 @@ export default async function LoginPage({ searchParams }: LoginPageProps): Promi
 			/>
 
 			{/* A_Header (z-10 via component) */}
-			<Header />
+			<Header variant="overlay" />
 
 			{/* B_Bìa — Hero content (z-10) */}
 			<section
-				className="relative flex flex-col min-h-screen px-4 pt-24 pb-8 md:min-h-0 md:px-10 md:py-20 xl:px-36 xl:py-24"
-				style={{ zIndex: 10, gap: "80px" }}
+				className="relative flex flex-col min-h-screen px-5 pt-[252px] pb-[146px] md:min-h-0 md:px-10 md:pt-20 md:pb-20 xl:px-36 xl:py-24 gap-8 md:gap-[80px]"
+				style={{ zIndex: 10 }}
 			>
 				{/* B.1_Key Visual — ROOT FURTHER logo */}
 				<Image
@@ -85,16 +85,16 @@ export default async function LoginPage({ searchParams }: LoginPageProps): Promi
 					width={451}
 					height={200}
 					priority
-					className="w-full max-w-[320px] md:max-w-[340px] xl:w-[451px] xl:h-[200px] object-contain"
+					className="w-[247px] h-[109px] md:w-full md:h-auto md:max-w-[340px] xl:w-[451px] xl:h-[200px] object-contain"
 				/>
 
 				{/* Content block: hero copy + login button */}
-				<div className="flex flex-col flex-1 md:flex-none gap-6 pl-0 md:pl-4">
+				<div className="flex flex-col flex-1 md:flex-none gap-0 md:gap-6 pl-0 md:pl-4">
 					{/* B.2_content — client component; re-renders on locale change */}
 					<LoginHeroText />
 
 					{/* B.3_Login — LoginButton client island */}
-					<div className="mt-auto md:mt-0">
+					<div className="mt-auto md:mt-0 flex justify-center md:justify-start">
 						<LoginButton initialError={initialError} />
 					</div>
 				</div>

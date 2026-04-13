@@ -6,7 +6,7 @@
 - **Figma File Key**: `9ypp4enmFmdK3YAFJLIu6C`
 - **Figma URL**: https://www.figma.com/design/9ypp4enmFmdK3YAFJLIu6C
 - **Created**: 2026-04-08
-- **Last Updated**: 2026-04-08
+- **Last Updated**: 2026-04-16
 
 ---
 
@@ -15,9 +15,9 @@
 | Metric | Count |
 |--------|-------|
 | Total Screens | 80+ (full list via MoMorph) |
-| Specified | 1 |
-| Remaining | 79+ |
-| Completion | ~1% |
+| Specified | 3 |
+| Remaining | 77+ |
+| Completion | ~3.75% |
 
 ---
 
@@ -27,10 +27,10 @@
 |---|-------------|-----------|--------|-----------|----------------|--------------|
 | 1 | Login | `GzbNeVGJHz` | ✅ Specified | `specs/GzbNeVGJHz-Login/spec.md` | Google OAuth, `/auth/callback` | Homepage (`/`) |
 | 2 | Homepage SAA | `i87tDx10uM` | 🔜 Pending | — | GET /kudos, GET /stats | Various |
-| 3 | Viết Kudo | `ihQ26W78P2` | 🔜 Pending | — | POST /kudos | Homepage |
-| 4 | Sun* Kudos - Live board | `MaZUn5xHXZ` | 🔜 Pending | — | GET /kudos/live | — |
+| 3 | Viết Kudo | `ihQ26W78P2` | ✅ Specified | `specs/ihQ26W78P2-VietKudo/spec.md` | POST /kudos, GET /users/search, GET /hashtags, POST /uploads | Live Board (`MaZUn5xHXZ`) ⚠️ |
+| 4 | Sun* Kudos - Live board | `MaZUn5xHXZ` | ✅ Specified | `specs/MaZUn5xHXZ-SunKudos/spec.md` | GET /kudos, GET /kudos/highlights, GET /kudos/stats, GET /kudos/leaderboard, GET /kudos/spotlight, POST /kudos/:id/like | Secret Box (`J3-4YFIpMM`), Write Kudo (`ihQ26W78P2`), Profile (`3FoIx6ALVb`) |
 | 5 | Open secret box | `J3-4YFIpMM` | 🔜 Pending | — | GET /giftbox, POST /giftbox/open | — |
-| 6 | Hệ thống giải | `zFYDgyj_pD` | 🔜 Pending | — | GET /awards | — |
+| 6 | Hệ thống giải | `zFYDgyj_pD` | ✅ Specified | `specs/zFYDgyj_pD-HeThongGiai/spec.md` | GET /awards | Sun* Kudos (via "Chi tiết") |
 | 7 | Countdown - Prelaunch page | `8PJQswPZmU` | 🔜 Pending | — | GET /event/status | Login |
 | 8 | Dropdown-ngôn ngữ | `hUyaaugye2` | 🔜 Pending | — | — | (overlay, from Header) |
 

@@ -42,9 +42,9 @@ export default function LoginButton({ initialError = null }: LoginButtonProps): 
 				aria-disabled={isLoading}
 				disabled={isLoading}
 				className={[
-					"w-full md:w-[305px] h-[60px] min-h-[44px]",
-					"rounded-lg flex items-center justify-center gap-2 px-6 py-4",
-					"cursor-pointer font-bold text-[22px] leading-7",
+					"w-[246px] h-[40px] min-h-[40px] md:w-[305px] md:h-[60px] md:min-h-[44px]",
+					"rounded md:rounded-lg flex items-center justify-center gap-2 p-3 md:px-6 md:py-4",
+					"cursor-pointer font-medium text-[14px] leading-5 md:font-bold md:text-[22px] md:leading-7",
 					"transition-all duration-150",
 					"focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",
 					isLoading ? "opacity-60 pointer-events-none" : "",

@@ -1,52 +1,84 @@
 import Image from "next/image";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import CountdownSection from "@/components/homepage/CountdownSection";
+import HeroCTA from "@/components/homepage/HeroCTA";
+import ThemeNarrative from "@/components/homepage/ThemeNarrative";
+import AwardsSection from "@/components/homepage/AwardsSection";
+import SunKudosBlock from "@/components/homepage/SunKudosBlock";
+import KudosWidget from "@/components/homepage/KudosWidget";
 
-export default function Home() {
+export default async function HomePage(): Promise<React.JSX.Element> {
 	return (
-		<div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-			<main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-				<Image className="dark:invert" src="/next.svg" alt="Next.js logo" width={180} height={38} priority />
-				<ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-					<li className="mb-2 tracking-[-.01em]">
-						Get started by editing{" "}
-						<code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-							src/app/page.tsx
-						</code>
-						.
-					</li>
-					<li className="tracking-[-.01em]">Save and see your changes instantly.</li>
-				</ol>
+		<div
+			className="min-h-screen flex flex-col"
+			style={{ backgroundColor: "#00101A" }}
+		>
+			{/* Sticky header */}
+			<Header />
 
-				<div className="flex gap-4 items-center flex-col sm:flex-row">
-					<a
-						className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-						href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Read our docs
-					</a>
+			{/* Hero zone — full-bleed keyvisual with gradient overlay */}
+			<div className="relative w-full overflow-hidden min-h-[500px] md:min-h-[700px]">
+				{/* Keyvisual background */}
+				<Image
+					src="/assets/homepage/keyvisual-bg.png"
+					alt=""
+					fill
+					className="object-cover object-center"
+					priority
+					style={{ zIndex: 0 }}
+				/>
+
+				{/* Gradient overlay */}
+				<div
+					className="absolute inset-0"
+					style={{
+						background:
+							"linear-gradient(12deg, #00101A 23.7%, rgba(0,18,29,0.46) 38.34%, rgba(0,19,32,0.00) 48.92%)",
+						zIndex: 1,
+					}}
+				/>
+
+				{/* Hero content */}
+				<div
+					className="relative w-full max-w-[1224px] mx-auto px-4 md:px-10 xl:px-0 flex flex-col justify-end pb-8 md:pb-16 xl:pb-24 min-h-[500px] md:min-h-[700px]"
+					style={{ zIndex: 2, paddingTop: "80px", gap: "24px" }}
+				>
+					{/* ROOT FURTHER hero logo */}
+					<Image
+						src="/assets/homepage/root-further-logo.png"
+						alt="ROOT FURTHER"
+						width={451}
+						height={200}
+						className="w-[200px] md:w-[451px] h-auto object-contain"
+						priority
+					/>
+
+					{/* Countdown + Event Info */}
+					<CountdownSection />
+
+					{/* CTA buttons */}
+					<HeroCTA />
 				</div>
-			</main>
-			<footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-				<a
-					className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-					href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<Image aria-hidden src="/file.svg" alt="File icon" width={16} height={16} />
-					Learn
-				</a>
-				<a
-					className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-					href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<Image aria-hidden src="/globe.svg" alt="Globe icon" width={16} height={16} />
-					Go to nextjs.org →
-				</a>
-			</footer>
+			</div>
+
+			{/* Theme narrative — full bleed */}
+			<ThemeNarrative />
+
+			{/* Awards + Kudos sections */}
+			<div
+				className="w-full max-w-[1224px] mx-auto px-4 md:px-10 xl:px-0 flex flex-col gap-16 md:gap-[120px] pt-10 pb-10 md:pt-[120px] md:pb-[120px]"
+			>
+				<AwardsSection />
+				<SunKudosBlock />
+			</div>
+
+			{/* Footer */}
+			<Footer />
+
+			{/* Floating Kudos write widget */}
+			<KudosWidget />
 		</div>
 	);
 }
+

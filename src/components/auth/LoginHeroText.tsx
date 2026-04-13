@@ -19,11 +19,10 @@ export default function LoginHeroText(): React.JSX.Element {
 
 	return (
 		<p
-			className="text-base leading-7 md:text-[20px] md:leading-[40px] font-bold max-w-[480px]"
+			className="text-[14px] leading-5 font-light tracking-[0.25px] md:text-[20px] md:leading-[40px] md:font-bold md:tracking-[0.5px] max-w-[480px]"
 			style={{
 				color: "var(--color-white)",
 				fontFamily: "var(--font-montserrat)",
-				letterSpacing: "0.5px",
 			}}
 		>
 			{t.line1}

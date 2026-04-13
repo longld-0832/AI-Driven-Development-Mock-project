@@ -74,7 +74,7 @@ export default function LanguageToggle({
 				aria-expanded={isOpen}
 				aria-haspopup="listbox"
 				onClick={() => setIsOpen((prev) => !prev)}
-				className="w-[108px] h-14 min-h-[44px] p-4 rounded flex items-center gap-0.5 justify-between cursor-pointer bg-transparent transition-colors duration-150 hover:bg-white/[0.08] active:bg-white/[0.12] focus-visible:outline focus-visible:outline-2 focus-visible:outline-white/50 focus-visible:outline-offset-2"
+				className="w-[90px] h-8 min-h-[32px] pt-1 pr-0 pb-1 pl-2 md:w-[108px] md:h-14 md:min-h-[44px] md:p-4 rounded flex items-center gap-0.5 justify-between cursor-pointer bg-transparent transition-colors duration-150 hover:bg-white/[0.08] active:bg-white/[0.12] focus-visible:outline focus-visible:outline-2 focus-visible:outline-white/50 focus-visible:outline-offset-2"
 			>
 				{activeLocale.code === "vi" && (
 					<Image
@@ -85,11 +85,11 @@ export default function LanguageToggle({
 					/>
 				)}
 				<span
-					className="hidden md:inline font-bold text-base leading-6"
+					className="inline text-[14px] md:text-base font-medium md:font-bold leading-5 md:leading-6"
 					style={{
 						color: "var(--color-white)",
 						fontFamily: "var(--font-montserrat)",
-						letterSpacing: "0.15px",
+						letterSpacing: "0px",
 					}}
 				>
 					{activeLocale.label}

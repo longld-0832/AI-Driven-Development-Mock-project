@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+/* Homepage — Self-hosted fonts */
+@font-face {
+	font-family: "Digital Numbers";
+	src: url("/fonts/digital-numbers.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "SVN-Gotham";
+	src: url("/fonts/svn-gotham.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
 :root {
 	--background: #ffffff;
 	--foreground: #171717;
@@ -20,6 +37,108 @@
 	/* Login — Fonts */
 	--font-montserrat: var(--font-montserrat-var);
 	--font-montserrat-alt: var(--font-montserrat-alt-var);
+
+	/* Homepage — Colors */
+	--color-accent-yellow-dim: rgba(255, 234, 158, 0.1);
+	--color-border-btn: #998c5f;
+	--color-surface-dark: #0f0f0f;
+	--color-homepage-header-bg: rgba(16, 20, 23, 0.8);
+
+	/* Homepage — Shadows */
+	--shadow-widget: 0 4px 4px rgba(0, 0, 0, 0.25), 0 0 6px #fae287;
+	--shadow-award-glow: 0 0 24px rgba(255, 234, 158, 0.25);
+
+	/* Homepage — Spacing */
+	--spacing-section-gap: 120px;
+	--spacing-countdown-gap: 40px;
+	--spacing-countdown-inner: 14px;
+	--spacing-awards-row-gap: 80px;
+
+	/* Awards Page — Colors */
+	--color-notification-dot: #d4271d;
+
+	/* Awards Page — Spacing */
+	--spacing-page-px: 144px;
+	--spacing-page-py: 96px;
+	--spacing-card-inner-gap: 40px;
+	--spacing-card-text-gap: 24px;
+	--spacing-card-section-gap: 32px;
+	--spacing-menu-gap: 16px;
+	--spacing-menu-content-gap: 80px;
+	--spacing-nav-item-padding: 16px;
+	--spacing-title-gap: 16px;
+
+	/* Awards Page — Border & Radius */
+	--radius-award-image: 24px;
+	--radius-card-content: 16px;
+
+	/* Sun Kudos — Colors */
+	--color-surface-card: #1a1a2e;
+	--color-hashtag-bg: rgba(255, 234, 158, 0.15);
+	--color-heart: #ff4d4d;
+	--color-heart-unfilled: rgba(255, 255, 255, 0.6);
+	--color-role-text: rgba(255, 255, 255, 0.6);
+	--color-hero-gradient-end: #1a0f2e;
+	--color-play-btn: rgba(255, 255, 255, 0.8);
+	--color-rank-gold: #ffd700;
+	--color-btn-secret-box: #ffea9e;
+	--color-btn-secret-box-text: #00101a;
+	--color-badge-leader-bg: rgba(255, 234, 158, 0.2);
+	--color-badge-leader-text: #ffea9e;
+	--color-badge-department-bg: rgba(76, 175, 80, 0.2);
+	--color-badge-department-text: #81c784;
+	--color-badge-team-bg: rgba(33, 150, 243, 0.2);
+	--color-badge-team-text: #64b5f6;
+
+	/* Sun Kudos — Shadows */
+	--shadow-card: 0 2px 8px rgba(0, 0, 0, 0.3);
+	--shadow-spotlight: 0 4px 24px rgba(255, 234, 158, 0.15);
+	--shadow-hero: 0 0 60px rgba(255, 234, 158, 0.1);
+
+	/* Sun Kudos — Spacing */
+	--spacing-card-gap: 16px;
+	--spacing-card-padding: 24px;
+	--spacing-highlight-gap: 24px;
+	--spacing-filter-gap: 12px;
+	--spacing-cards-gap: 32px;
+
+	/* Sun Kudos — Radius */
+	--radius-card: 16px;
+	--radius-btn: 8px;
+	--radius-pill: 100px;
+	--radius-search-input: 100px;
+	--radius-spotlight: 16px;
+	--radius-stat-panel: 16px;
+	--radius-secret-box-btn: 8px;
+
+	/* Write Kudo Modal — Colors */
+	--color-modal-overlay: rgba(0, 16, 26, 0.6);
+	--color-text-dark: #00101a;
+	--color-text-hint: #6b7280;
+	--color-text-required: #ef4444;
+	--color-error-border: #ef4444;
+	--color-toolbar-border: #e5e7eb;
+	--color-toolbar-active: #f3f4f6;
+	--color-chip-bg: #f3f4f6;
+	--color-chip-text: #374151;
+	--color-remove-icon: #ef4444;
+	--color-disabled-bg: #e5e7eb;
+	--color-disabled-text: #9ca3af;
+	--color-community-link: #d97706;
+
+	/* Write Kudo Modal — Borders & Radius */
+	--border-input: 1px solid #d1d5db;
+	--border-input-focus: 1px solid #998c5f;
+	--border-input-error: 1px solid #ef4444;
+	--radius-modal: 16px;
+	--radius-input: 8px;
+	--radius-toolbar-btn: 4px;
+	--radius-thumbnail: 8px;
+	--radius-checkbox: 4px;
+
+	/* Write Kudo Modal — Shadows */
+	--shadow-modal: 0 8px 32px rgba(0, 0, 0, 0.3);
+	--shadow-dropdown: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 @theme inline {
@@ -40,4 +159,76 @@ body {
 	background: var(--background);
 	color: var(--foreground);
 	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Login — Header responsive background */
+.header-bg {
+	background: linear-gradient(
+		180deg,
+		#00101a 0%,
+		rgba(0, 16, 26, 0.3) 76.44%,
+		rgba(0, 16, 26, 0.2) 84.62%,
+		rgba(0, 16, 26, 0.15) 88.7%,
+		rgba(0, 16, 26, 0.1) 92.79%,
+		rgba(0, 16, 26, 0.05) 96.39%,
+		rgba(0, 16, 26, 0) 100%
+	);
+}
+
+@media (min-width: 768px) {
+	.header-bg {
+		background: rgba(11, 15, 18, 0.8);
+	}
+}
+
+/* Login — Footer responsive font-family and border */
+.footer-copyright {
+	font-family: var(--font-montserrat);
+}
+
+.footer-divider {
+	border-top: none;
+}
+
+@media (min-width: 768px) {
+	.footer-copyright {
+		font-family: var(--font-montserrat-alt);
+	}
+
+	.footer-divider {
+		border-top: 1px solid var(--color-divider);
+	}
+}
+
+/* Homepage — Hide scrollbar for horizontal scroll containers */
+.scrollbar-hide {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+	display: none;
+}
+
+@keyframes kudos-ticker {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+.kudos-ticker-track {
+	animation: kudos-ticker 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.kudos-ticker-track {
+		animation: none;
+	}
+}
+
+/* Awards Page — Smooth scroll for anchor navigation */
+html {
+	scroll-behavior: smooth;
 }
