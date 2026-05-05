@@ -17,8 +17,7 @@ export default function LoginButton({ initialError = null }: LoginButtonProps): 
 		setError(null);
 
 		const supabase = createClient();
-		const redirectTo =
-			(process.env.NEXT_PUBLIC_SITE_URL ?? window.location.origin) + "/auth/callback";
+		const redirectTo = window.location.origin + "/auth/callback";
 
 		const { error: oauthError } = await supabase.auth.signInWithOAuth({
 			provider: "google",
